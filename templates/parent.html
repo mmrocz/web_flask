@@ -1,0 +1,18 @@
+{% block index %}
+<html lang="en">
+<head>
+    {% block head %}
+       <meta charset="UTF-8">
+       <title>Moja strona</title>
+       <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% endblock %}
+</head>
+<body>
+    <h1>Witaj na mojej stornie internetowej </h1>
+    <img src="{{url_for('static',filename='jhend.jfif')}}" alt="Jimmy"/>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <a href="{{ url_for('index')}}">index</a> <br>
+    <a href="{{ url_for('kontakt')}}">kontakt</a>
+</body>
+</html>
+{% endblock %}
